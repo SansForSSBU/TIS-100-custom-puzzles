@@ -38,11 +38,12 @@ function get_streams()
 	input = {}
 	output = {}
 	n = 0
-	while n < 39 do
-		length = math.min(math.random(2, 9), 39-n)
-		for i = n, n+length-1 do
-			input[i] = math.random(0, 1)	
-			output[i] = input[i] -- Fix this to actually be the reverse sequence
+	while n < 35 do
+		length = math.min(math.random(3, 9), 39-n)
+		for i = 0, length-1 do
+			bit = math.random(0, 1)
+			input[n+i] = bit
+			output[n+(length-i-1)] = bit
 		end
 		input[n+length] = -1
 		output[n+length] = -1
