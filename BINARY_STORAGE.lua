@@ -37,13 +37,13 @@ end
 function get_streams()
 	input = {}
 	output = {}
-	n = 0
-	while n < 35 do
+	n = 1
+	while n < 38 do
 		length = math.min(math.random(3, 9), 39-n)
 		for i = 0, length-1 do
 			bit = math.random(0, 1)
 			input[n+i] = bit
-			output[n+(length-i-1)] = bit
+			output[n+(length-1-i)] = bit
 		end
 		input[n+length] = -1
 		output[n+length] = -1
